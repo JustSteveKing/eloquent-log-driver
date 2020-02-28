@@ -42,12 +42,12 @@ class EloquentLoggerTest extends TestCase
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereDebug()->count()
+            DatabaseLog::whereDebug()->count()
         );
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereLevel('DEBUG')->count()
+            DatabaseLog::whereLevel('DEBUG')->count()
         );
     }
 
@@ -64,12 +64,12 @@ class EloquentLoggerTest extends TestCase
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereInfo()->count()
+            DatabaseLog::whereInfo()->count()
         );
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereLevel('INFO')->count()
+            DatabaseLog::whereLevel('INFO')->count()
         );
     }
 
@@ -86,12 +86,12 @@ class EloquentLoggerTest extends TestCase
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereNotice()->count()
+            DatabaseLog::whereNotice()->count()
         );
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereLevel('NOTICE')->count()
+            DatabaseLog::whereLevel('NOTICE')->count()
         );
     }
 
@@ -108,12 +108,12 @@ class EloquentLoggerTest extends TestCase
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereWarning()->count()
+            DatabaseLog::whereWarning()->count()
         );
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereLevel('WARNING')->count()
+            DatabaseLog::whereLevel('WARNING')->count()
         );
     }
 
@@ -130,12 +130,12 @@ class EloquentLoggerTest extends TestCase
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereError()->count()
+            DatabaseLog::whereError()->count()
         );
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereLevel('ERROR')->count()
+            DatabaseLog::whereLevel('ERROR')->count()
         );
     }
 
@@ -152,12 +152,12 @@ class EloquentLoggerTest extends TestCase
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereCritical()->count()
+            DatabaseLog::whereCritical()->count()
         );
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereLevel('CRITICAL')->count()
+            DatabaseLog::whereLevel('CRITICAL')->count()
         );
     }
 
@@ -174,12 +174,12 @@ class EloquentLoggerTest extends TestCase
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereAlert()->count()
+            DatabaseLog::whereAlert()->count()
         );
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereLevel('ALERT')->count()
+            DatabaseLog::whereLevel('ALERT')->count()
         );
     }
 
@@ -196,12 +196,12 @@ class EloquentLoggerTest extends TestCase
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereEmergency()->count()
+            DatabaseLog::whereEmergency()->count()
         );
 
         $this->assertEquals(
             1,
-            DatabaseLog::query()->whereLevel('EMERGENCY')->count()
+            DatabaseLog::whereLevel('EMERGENCY')->count()
         );
     }
 }

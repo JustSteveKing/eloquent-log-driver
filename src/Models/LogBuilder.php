@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace JustSteveKing\EloquentLogDriver\Models;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Builder;
 
 class LogBuilder extends Builder
 {
     public function whereLevel(string $level): self
     {
-        return $this->where('level', $level);
+        return $this->where('level', Str::upper($level));
     }
 
     public function whereInfo(): self

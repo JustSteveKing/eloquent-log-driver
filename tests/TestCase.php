@@ -31,10 +31,10 @@ class TestCase extends \Orchestra\Testbench\TestCase
         $app['config']->set(
             'logging.channels',
             [
-            'eloquent' => [
-                'driver' => 'custom',
-                'via' => \JustSteveKing\EloquentLogDriver\Logger\EloquentLogger::class
-            ]
+                'eloquent' => [
+                    'driver' => 'custom',
+                    'via' => \JustSteveKing\EloquentLogDriver\Logger\EloquentLogger::class
+                ]
             ]
         );
     }
