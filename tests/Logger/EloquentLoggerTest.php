@@ -12,7 +12,6 @@ use JustSteveKing\EloquentLogDriver\Models\DatabaseLog;
 
 class EloquentLoggerTest extends TestCase
 {
-   
     use DatabaseMigrations;
 
     protected $table = 'database_logs';
