@@ -16,6 +16,10 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function boot()
     {
+        $this->publishes([
+            __DIR__ . '/../database/migrations/2020_02_27_003343_create_logs_table.php' =>
+            database_path("/migrations/2020_02_27_003343_create_logs_table.php")
+        ], 'migrations');
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
     }
 
