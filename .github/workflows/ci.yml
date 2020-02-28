@@ -1,5 +1,5 @@
 name: CI
-
+  
 on:
   push:
   pull_request:
@@ -47,3 +47,5 @@ jobs:
 
       - name: Execute tests
         run: vendor/bin/phpunit
+        env:
+          APP_ENV: testing
