@@ -3,6 +3,9 @@ name: CI
 on:
   push:
   pull_request:
+    branches:
+      - master
+      - feature/*
 
 jobs:
   build:
@@ -36,11 +39,11 @@ jobs:
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv
           coverage: none
 
+      - name: Copy ENV Laravel configuration for CI
+        run: php -r "file_exists('.env') || copy('.env.ci', '.env')"
+
       - name: Install dependencies
-        run: |
-          composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
-          composer require league/flysystem-aws-s3-v3
-          composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-suggest
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
 
       - name: Execute tests
         run: vendor/bin/phpunit
