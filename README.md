@@ -17,10 +17,6 @@ $ composer require juststeveking/eloquent-log-driver
 
 After installation, publish the migrations using:
 
-```bash
-$ php artisan vendor:publish --provider="JustSteveKing\EloquentLogDriver\ServiceProvider"
-```
-
 Then we can run our migration, which will create a table called `database_logs`.
 
 ```bash
