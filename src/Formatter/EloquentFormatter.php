@@ -52,8 +52,8 @@ class EloquentFormatter extends NormalizerFormatter
         $fills['message'] = $record['message'];
         $context = $record['context'];
         if (!empty($context)) {
-            $fills['type'] = array_key_exists($context, 'type') ? $context['type'] : self::LOG;
-            $fills['result'] = array_key_exists($context, 'result')  ? $context['result'] : self::NEUTRAL;
+            $fills['type'] = array_key_exists('type', $context) ? $context['type'] : self::LOG;
+            $fills['result'] = array_key_exists('result', $context)  ? $context['result'] : self::NEUTRAL;
             $fills = array_merge($record['context'], $fills);
         }
 
