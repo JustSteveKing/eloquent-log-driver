@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace JustSteveKing\EloquentLogDriver\Logger;
+namespace JustSteveKing\EloquentLogDriver\Loggers;
 
 use Monolog\Logger;
 use JustSteveKing\EloquentLogDriver\Handler\EloquentHandler;
